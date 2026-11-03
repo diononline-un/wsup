@@ -1,9 +1,21 @@
-# Supplement Stack Calculator (wsup)
+# WSUP — Supplement Stack Calculator
 
 Multi-tenant SaaS for evidence-based supplement and peptide stacks: anonymous accounts, profile-driven
 recommendations with a confidence score, Bring Your Own Stack matching, and tokenized ICS calendar feeds.
 
-Current milestone: PocketBase schema + anonymous signup with 25-word recovery seed.
+Brand: **WSUP** (spoken: W-S-U-P). Descriptor: Supplement Stack Calculator.
+
+## What works now
+
+- Anonymous signup with 25-word recovery seed (download, quiz, scrypt hash) and login.
+- Profile onboarding (`/onboarding/profile`): body, lifestyle, health and cycle data with "why we ask" tooltips, metric/imperial.
+- Dashboard with plan badge, profile status and working links.
+- Settings (`/settings`): theme (system/light/dark), JSON data export, account deletion with password re-check.
+- Dark mode: follows the OS by default, toggle in the header, choice stored per browser.
+- PocketBase schema for the full PRD data model plus 20 seed substances and 6 interactions.
+
+Not built yet: recommendation engine and confidence score, BYOS matching, ICS feeds, AI service,
+seed recovery, password change.
 
 ## Stack
 
@@ -48,7 +60,7 @@ plain HTTP, so the browser is an insecure context and `crypto.subtle` is unavail
 uses the local SHA-256 in `web/src/lib/seed/sha256.ts` for exactly that reason. Vite dev allows the
 Tailscale host via `server.allowedHosts` in `web/vite.config.ts`.
 
-Tests: `cd web && npm test` (seed phrase, credential rules, scrypt hashing).
+Tests: `cd web && npm test` (seed phrase, SHA-256, credential rules, scrypt hashing, theme).
 
 ## Auth model
 
@@ -62,6 +74,9 @@ Tests: `cd web && npm test` (seed phrase, credential rules, scrypt hashing).
 
 `users` (extended), `user_secrets` (recovery hash), `user_profiles`, `substances`,
 `substance_interactions`, `user_stacks`, `calendar_feeds`. Seed data: 20 substances, 6 interactions.
+
+Account routes: `/signup`, `/login`, `/dashboard`, `/onboarding/profile`, `/settings`; API: `/api/signup`,
+`/api/account/export`, `/api/account/delete`.
 
 ## Ports
 

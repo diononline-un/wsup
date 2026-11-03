@@ -24,33 +24,28 @@
 </script>
 
 <svelte:head>
-  <title>Log in · Stack Calculator</title>
+  <title>Log in · WSUP</title>
 </svelte:head>
 
 <section class="mx-auto max-w-md px-4 py-16 sm:px-6">
   <h1 class="text-3xl font-bold tracking-tight">Welcome back</h1>
-  <p class="mt-3 text-slate-600">Usernames are case-insensitive, so just type the name you registered.</p>
+  <p class="mt-3 text-slate-600 dark:text-slate-300">
+    Usernames are case-insensitive, so just type the name you registered.
+  </p>
 
   {#if error}
-    <div role="alert" class="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+    <div role="alert" class="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-900 dark:bg-red-950/60 dark:text-red-200">
       {error}
     </div>
   {/if}
 
   <form class="mt-8 space-y-5" onsubmit={submit}>
     <div>
-      <label for="username" class="block text-sm font-medium">Username</label>
-      <input
-        id="username"
-        name="username"
-        autocomplete="username"
-        required
-        bind:value={username}
-        class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3"
-      />
+      <label for="username" class="ui-label">Username</label>
+      <input id="username" name="username" autocomplete="username" required bind:value={username} class="ui-input" />
     </div>
     <div>
-      <label for="password" class="block text-sm font-medium">Password</label>
+      <label for="password" class="ui-label">Password</label>
       <input
         id="password"
         name="password"
@@ -58,20 +53,16 @@
         autocomplete="current-password"
         required
         bind:value={password}
-        class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3"
+        class="ui-input"
       />
     </div>
-    <button
-      type="submit"
-      disabled={busy}
-      class="w-full rounded-xl bg-slate-900 px-6 py-3 font-medium text-white hover:bg-slate-700 disabled:opacity-50"
-    >
+    <button type="submit" disabled={busy} class="ui-btn-primary w-full">
       {busy ? 'Signing in…' : 'Log in'}
     </button>
   </form>
 
-  <p class="mt-6 text-sm text-slate-500">
+  <p class="ui-muted mt-6 text-sm">
     Lost your password? Account recovery with your 25-word seed is not built yet.
-    <a href="/signup" class="text-slate-700">Create a new account</a> in the meantime.
+    <a href="/signup" class="ui-link">Create a new account</a> in the meantime.
   </p>
 </section>

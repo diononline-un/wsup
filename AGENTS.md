@@ -1,4 +1,4 @@
-# wsup — Projektregeln
+# WSUP (wsup) — Projektregeln
 
 Gilt zusätzlich zu `~/.dsh/AGENTS.md`, projektspezifisch.
 
@@ -29,6 +29,17 @@ Gilt zusätzlich zu `~/.dsh/AGENTS.md`, projektspezifisch.
 - Recovery-Hash: scrypt in `web/src/lib/server/recovery.ts`, gespeichert in `user_secrets` (API-Rules `null`,
   nur Superuser). Seed-Wörter niemals speichern oder loggen.
 - Superuser-Zugang für Server-Calls aus `web/.env` (`PB_ADMIN_EMAIL`, `PB_ADMIN_PASSWORD`, gitignored).
+
+## Marke und UI
+
+- Produktname: **WSUP** (W-S-U-P), Beschreibung "Supplement Stack Calculator". Logo als gestapelte Balken
+  (`web/src/lib/Logo.svelte`), Favicon `web/static/favicon.svg`.
+- Dark Mode: System-Default plus Header-Toggle (sofortiger Wechsel Light/Dark), Auswahl im Settings-Bereich;
+  Umsetzung in `web/src/lib/theme.ts`, Vorab-Anwendung per Inline-Script in `web/src/app.html`, Tailwind-Variante
+  `@custom-variant dark` in `web/src/app.css`. Komponenten-Klassen `ui-*` nutzen, damit beide Modi stimmen.
+- Routen: `/signup`, `/login`, `/dashboard`, `/onboarding/profile`, `/settings`.
+- Account-API: `/api/signup`, `/api/account/export` (JSON-Download, ohne Recovery-Hash), `/api/account/delete`
+  (Passwort-Re-Check, Superuser-Löschung, Cascades räumen Profil/Secrets/Stacks/Feeds).
 
 ## Befehle
 

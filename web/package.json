@@ -7,7 +7,7 @@
     "dev": "vite dev --port 2018 --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --port 2018 --host 0.0.0.0",
-    "test": "node --test src/lib/seed/phrase.test.ts src/lib/seed/sha256.test.ts src/lib/credentials.test.ts src/lib/server/recovery.test.ts"
+    "test": "node --test src/lib/theme.test.ts src/lib/seed/phrase.test.ts src/lib/seed/sha256.test.ts src/lib/credentials.test.ts src/lib/server/recovery.test.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "^5.5.7",

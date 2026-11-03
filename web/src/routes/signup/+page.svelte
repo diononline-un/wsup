@@ -103,7 +103,7 @@
       <li class="flex items-center gap-2">
         <span
           class="grid h-6 w-6 place-items-center rounded-full text-xs font-semibold {step === item.id
-            ? 'bg-slate-900 text-white'
+            ? 'bg-slate-900 text-white dark:bg-emerald-500 dark:text-slate-950'
             : index < steps.findIndex((s) => s.id === step)
               ? 'bg-emerald-100 text-emerald-800'
               : 'bg-slate-200 text-slate-500'}"
@@ -113,7 +113,7 @@
         <span class:font-medium={step === item.id}>{item.label}</span>
       </li>
       {#if index < steps.length - 1}
-        <li aria-hidden="true" class="h-px w-8 bg-slate-300"></li>
+        <li aria-hidden="true" class="h-px w-8 bg-slate-300 dark:bg-slate-700"></li>
       {/if}
     {/each}
   </ol>
@@ -123,13 +123,13 @@
   </h1>
 
   {#if error}
-    <div role="alert" class="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+    <div role="alert" class="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-900 dark:bg-red-950/60 dark:text-red-200">
       {error}
     </div>
   {/if}
 
   {#if step === 'account'}
-    <p class="mt-3 text-slate-600">
+    <p class="mt-3 text-slate-600 dark:text-slate-300">
       No email required. Your username and password are the only login data we store.
     </p>
     <form
@@ -140,20 +140,20 @@
       }}
     >
       <div>
-        <label for="username" class="block text-sm font-medium">Username</label>
+        <label for="username" class="ui-label">Username</label>
         <input
           id="username"
           name="username"
           autocomplete="username"
           required
           bind:value={username}
-          class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3"
+          class="ui-input"
           placeholder="e.g. iron_owl"
         />
-        <p class="mt-1 text-xs text-slate-500">3-32 characters: lowercase letters, digits, underscore.</p>
+        <p class="ui-hint">3-32 characters: lowercase letters, digits, underscore.</p>
       </div>
       <div>
-        <label for="password" class="block text-sm font-medium">Password</label>
+        <label for="password" class="ui-label">Password</label>
         <input
           id="password"
           name="password"
@@ -161,12 +161,12 @@
           autocomplete="new-password"
           required
           bind:value={password}
-          class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3"
+          class="ui-input"
         />
-        <p class="mt-1 text-xs text-slate-500">At least 8 characters with upper, lower and a special character.</p>
+        <p class="ui-hint">At least 8 characters with upper, lower and a special character.</p>
       </div>
       <div>
-        <label for="confirm" class="block text-sm font-medium">Repeat password</label>
+        <label for="confirm" class="ui-label">Repeat password</label>
         <input
           id="confirm"
           name="confirm"
@@ -174,33 +174,33 @@
           autocomplete="new-password"
           required
           bind:value={confirmPassword}
-          class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3"
+          class="ui-input"
         />
       </div>
       <button
         type="submit"
         disabled={busy}
-        class="w-full rounded-xl bg-slate-900 px-6 py-3 font-medium text-white hover:bg-slate-700 disabled:opacity-50"
+        class="ui-btn-primary w-full"
       >
         Continue
       </button>
     </form>
   {:else if step === 'seed'}
-    <p class="mt-3 text-slate-600">
+    <p class="mt-3 text-slate-600 dark:text-slate-300">
       These 25 words are the only way to recover your account. We store a hash, never the words themselves. Write them
       down or keep the file somewhere safe.
     </p>
 
-    <ol class="mt-6 grid grid-cols-2 gap-2 rounded-2xl border border-slate-200 bg-white p-4 text-sm sm:grid-cols-5">
+    <ol class="mt-6 grid grid-cols-2 gap-2 rounded-2xl border border-slate-200 bg-white p-4 text-sm sm:grid-cols-5 dark:border-slate-800 dark:bg-slate-900">
       {#each phrase as word, index}
-        <li class="flex items-baseline gap-2 rounded-lg bg-slate-50 px-2 py-1.5">
-          <span class="w-5 text-right text-xs text-slate-400">{index + 1}</span>
+        <li class="flex items-baseline gap-2 rounded-lg bg-slate-50 px-2 py-1.5 dark:bg-slate-800/60">
+          <span class="w-5 text-right text-xs text-slate-400 dark:text-slate-500">{index + 1}</span>
           <span class="font-mono">{word}</span>
         </li>
       {/each}
     </ol>
 
-    <div class="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+    <div class="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950/60 dark:text-amber-200">
       Do not share this list. Anyone with these words can take over the account. There is no email reset.
     </div>
 
@@ -208,14 +208,14 @@
       <button
         type="button"
         onclick={downloadSeed}
-        class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-medium hover:bg-slate-50"
+        class="ui-btn-secondary px-5 py-3"
       >
         {downloaded ? 'Download again (.txt)' : 'Download recovery seed (.txt)'}
       </button>
       <button
         type="button"
         onclick={startVerifyStep}
-        class="rounded-xl bg-slate-900 px-5 py-3 font-medium text-white hover:bg-slate-700 {downloaded
+        class="ui-btn-primary {downloaded
           ? ''
           : 'cursor-not-allowed opacity-50'}"
         aria-disabled={!downloaded}
@@ -224,13 +224,13 @@
       </button>
     </div>
   {:else}
-    <p class="mt-3 text-slate-600">
-      Type the requested words from the file you downloaded. This proves the seed is saved before the account exists.
+    <p class="mt-3 text-slate-600 dark:text-slate-300">
+      Type the requested words from the file you downloaded. The check runs before the account exists.
     </p>
     <form class="mt-8 space-y-5" onsubmit={submit}>
       {#each quiz as index, position}
         <div>
-          <label for={`word-${index}`} class="block text-sm font-medium">Word #{index + 1}</label>
+          <label for={`word-${index}`} class="ui-label">Word #{index + 1}</label>
           <input
             id={`word-${index}`}
             name={`word-${index}`}
@@ -239,14 +239,14 @@
             autocapitalize="off"
             spellcheck="false"
             bind:value={answers[position]}
-            class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 font-mono"
+            class="ui-input font-mono"
           />
         </div>
       {/each}
       <button
         type="submit"
         disabled={busy}
-        class="w-full rounded-xl bg-slate-900 px-6 py-3 font-medium text-white hover:bg-slate-700 disabled:opacity-50"
+        class="ui-btn-primary w-full"
       >
         {busy ? 'Creating account…' : 'Create account'}
       </button>

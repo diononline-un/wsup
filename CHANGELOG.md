@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-03 — WSUP-Branding, Dark Mode, Profil-Onboarding, Settings
+
+- Marke auf WSUP festgelegt: Logo (gestapelte Balken), Favicon, Header-Wortmarke, Titel und Footer.
+- Dark Mode mit System-Erkennung, sofortigem Header-Toggle und gespeicherter Auswahl; alle Seiten nutzen die `ui-*`-Klassen.
+- Profil-Onboarding `/onboarding/profile`: Körper, Lifestyle, Gesundheit, Zyklus (nur bei biologischem Geschlecht female), Info-Tooltips je Feld, Metrik/Imperial-Umschaltung, Speichern in `user_profiles`.
+- Dashboard zeigt Plan-Badge, Profilstatus (Complete/Missing) und funktionierende Links; "Build your profile / Next step" führt jetzt wirklich ins Onboarding.
+- Settings `/settings`: Theme-Auswahl, JSON-Export aller Account-Daten, Account-Löschung mit Passwort-Re-Check und Cascade.
+- Tests auf 17 erweitert (Theme-Logik), Build sauber, Headless-Durchlauf über Tailscale grün (Signup, Profil, Dark Mode, Export, Löschung).
+
 ## 2026-11-03 — Plan-Refresh im Dashboard, Pro-Freischaltung
 
 - Dashboard ruft `authRefresh()` auf: Tier-Änderungen (z. B. Pro-Freischaltung) sind nach dem Login sichtbar, ohne neu einzuloggen; ungültige Tokens führen zurück zum Login.
