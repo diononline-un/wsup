@@ -24,6 +24,9 @@
         <a href="/login" class="ui-btn-secondary px-6 py-3">I already have an account</a>
       </div>
       <p class="ui-muted mt-4 text-sm">No email. 25-word recovery seed. Basic tier stays free.</p>
+      <p class="mt-3 text-sm">
+        <a href="/evidence" class="ui-link">Browse the evidence library →</a>
+      </p>
     </div>
 
     <div class="ui-card p-6 shadow-sm">

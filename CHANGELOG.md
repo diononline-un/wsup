@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-03 — Evidence-Library mit Research-Database
+
+- Neue Collection `substance_evidence` (Papers mit DOI/PMID/URL) und Research-Felder auf `substances` (`research_summary`, `evidence_note`, `claims`, `research_updated`); Evidenzskala auf A–E erweitert.
+- Datensatz `research/evidence.json`: 20 Substanzen, 60 Quellen, 50 Claims. Peptid-Quellen aus dem rejuvia-Forschungspool übernommen, Stanni-Supplements mit PubMed-Recherche (Meta-Analysen, RCTs, Position Stands, DOI/PMID) belegt.
+- Öffentliche Seiten `/evidence` (Kategorien, Evidenzgrade) und `/evidence/<slug>` (Summary, Claims mit Level/Status, Quellen, Interaktionen, Disclaimer), verlinkt in Navigation und Landing.
+- Migration `pb_migrations/1757400003_research.js` validiert den Datensatz beim Seed; `research/evidence.test.mjs` prüft Pflichtfelder und 1:1-Mapping zu den Seed-Substanzen.
+- Tests: 21 grün, Build sauber.
+
 ## 2026-11-03 — WSUP-Branding, Dark Mode, Profil-Onboarding, Settings
 
 - Marke auf WSUP festgelegt: Logo (gestapelte Balken), Favicon, Header-Wortmarke, Titel und Footer.

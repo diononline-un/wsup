@@ -41,6 +41,18 @@ Gilt zusätzlich zu `~/.dsh/AGENTS.md`, projektspezifisch.
 - Account-API: `/api/signup`, `/api/account/export` (JSON-Download, ohne Recovery-Hash), `/api/account/delete`
   (Passwort-Re-Check, Superuser-Löschung, Cascades räumen Profil/Secrets/Stacks/Feeds).
 
+## Research / Evidence
+
+- Dataset: `research/evidence.json` (Quelle der Wahrheit), Schema + Provenienz in `research/README.md`.
+- Migration `pb_migrations/1757400003_research.js` liest die Datei per `$os.readFile("research/evidence.json")` —
+  PocketBase muss aus dem Repo-Root gestartet werden (`./scripts/dev-pb.sh`). `$os.readFile` liefert Bytes:
+  mit `String.fromCharCode` in einen String wandeln, nicht direkt an `JSON.parse` geben.
+- Peptid-Quellen: aus `/home/dsh/Projekte/rejuvia/src/lib/forschung/subjects/` extrahiert (dort mit PMID/DOI geprüft).
+  Stanni-Quellen: PubMed E-utilities, Metadaten mit DOI/PMID im Datensatz.
+- Evidenzskala A-E (A stärkste), Claims brauchen `level` + `status`; `web && npm test` prüft 1:1-Mapping zu
+  den Seed-Substanzen und alle Pflichtfelder.
+- Öffentliche Seiten `/evidence` und `/evidence/<slug>` lesen per Server-Loader (PocketBase public read).
+
 ## Befehle
 
 ```bash

@@ -1,0 +1,1057 @@
+{
+  "version": 1,
+  "generated": "2026-11-03",
+  "note": "Claims are paraphrases with evidence levels. Sources are peer-reviewed papers unless the venue says otherwise.",
+  "substances": [
+    {
+      "slug": "ashwagandha",
+      "evidence_level": "B",
+      "evidence_note": "Several short randomized trials, heterogeneous products and doses.",
+      "research_summary": "Ashwagandha extracts show short-term reductions in stress and anxiety scores. Testosterone and sleep claims rest on smaller and less consistent trials.",
+      "claims": [
+        {
+          "text": "Ashwagandha supplementation reduces stress and anxiety scores in short-term randomized trials.",
+          "level": "B",
+          "status": "plausible"
+        },
+        {
+          "text": "Effects on testosterone and sleep are inconsistent and based on smaller trials.",
+          "level": "C",
+          "status": "speculative"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Does Ashwagandha supplementation have a beneficial effect on the management of anxiety and stress? A systematic review and meta-analysis of randomized controlled trials.",
+          "authors": "Akhgarjand C, Asoudeh F, Bagheri A",
+          "year": 2022,
+          "venue": "Phytother Res",
+          "kind": "meta",
+          "doi": "10.1002/ptr.7598",
+          "pmid": "36017529",
+          "url": "https://doi.org/10.1002/ptr.7598"
+        },
+        {
+          "title": "Effects of Ashwagandha (Withania Somnifera) on stress and anxiety: A systematic review and meta-analysis.",
+          "authors": "Arumugam V, Vijayakumar V, Balakrishnan A",
+          "year": 2024,
+          "venue": "Explore (NY)",
+          "kind": "meta",
+          "doi": "10.1016/j.explore.2024.103062",
+          "pmid": "39348746",
+          "url": "https://doi.org/10.1016/j.explore.2024.103062"
+        }
+      ]
+    },
+    {
+      "slug": "b-complex",
+      "evidence_level": "B",
+      "evidence_note": "Strong biomarker effects, no proven hard-outcome benefit in trials.",
+      "research_summary": "B vitamins lower homocysteine reliably. Trials that lowered homocysteine did not reduce cardiovascular events, so the marker is a poor stand-in for clinical benefit.",
+      "claims": [
+        {
+          "text": "B-vitamin supplementation lowers plasma homocysteine.",
+          "level": "A",
+          "status": "established"
+        },
+        {
+          "text": "Lowering homocysteine with B vitamins did not reduce cardiovascular events in randomized trials.",
+          "level": "A",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Meta-analysis of B vitamin supplementation on plasma homocysteine, cardiovascular and all-cause mortality.",
+          "authors": "Huang T, Chen Y, Yang B",
+          "year": 2012,
+          "venue": "Clin Nutr",
+          "kind": "meta",
+          "doi": "10.1016/j.clnu.2011.01.003",
+          "pmid": "22652362",
+          "url": "https://doi.org/10.1016/j.clnu.2011.01.003"
+        },
+        {
+          "title": "Meta-analysis of folic acid supplementation trials on risk of cardiovascular disease and risk interaction with baseline homocysteine levels.",
+          "authors": "Miller ER 3rd, Juraschek S, Pastor-Barriuso R",
+          "year": 2010,
+          "venue": "Am J Cardiol",
+          "kind": "meta",
+          "doi": "10.1016/j.amjcard.2010.03.064",
+          "pmid": "20691310",
+          "url": "https://doi.org/10.1016/j.amjcard.2010.03.064"
+        },
+        {
+          "title": "Homocysteine, B-vitamins and CVD.",
+          "authors": "McNulty H, Pentieva K, Hoey L",
+          "year": 2008,
+          "venue": "Proc Nutr Soc",
+          "kind": "review",
+          "doi": "10.1017/S0029665108007076",
+          "pmid": "18412997",
+          "url": "https://doi.org/10.1017/S0029665108007076"
+        }
+      ]
+    },
+    {
+      "slug": "bpc-157",
+      "evidence_level": "C",
+      "evidence_note": "Mostly rat models from one research group; one negative controlled human trial.",
+      "research_summary": "BPC-157 is a synthetic pentadecapeptide studied for tissue repair. Animal data look broad, but the only controlled human trial (ulcerative colitis) failed and no human pharmacokinetics exist.",
+      "claims": [
+        {
+          "text": "In rat models, BPC-157 accelerated healing of tendon, ligament, muscle and bone injuries.",
+          "level": "C",
+          "status": "plausible"
+        },
+        {
+          "text": "In the only controlled human trial (ulcerative colitis), BPC-157 did not improve remission over placebo.",
+          "level": "C",
+          "status": "established"
+        },
+        {
+          "text": "VEGFR2-mediated angiogenesis is shown in cell culture, but human pharmacokinetics are unpublished.",
+          "level": "D",
+          "status": "speculative"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Pharmacokinetics, distribution, metabolism, and excretion of body-protective compound 157, a cytoprotective pentadecapeptide, in rats and dogs",
+          "authors": "He L, Feng D, Guo H, et al.",
+          "year": 2022,
+          "venue": "Frontiers in Pharmacology",
+          "kind": "preclinical",
+          "doi": "10.3389/fphar.2022.1026182",
+          "pmid": "36588717",
+          "url": "https://doi.org/10.3389/fphar.2022.1026182"
+        },
+        {
+          "title": "Stable Gastric Pentadecapeptide BPC 157 and Wound Healing",
+          "authors": "Seiwerth S, Milavic M, Vukojevic J, Gojkovic S, Krezic I, Vuletic LB, et al.",
+          "year": 2021,
+          "venue": "Frontiers in Pharmacology",
+          "kind": "review",
+          "doi": "10.3389/fphar.2021.627533",
+          "pmid": "34267654",
+          "url": "https://doi.org/10.3389/fphar.2021.627533"
+        },
+        {
+          "title": "Therapeutic potential of pro-angiogenic BPC157 is associated with VEGFR2 activation and up-regulation",
+          "authors": "Hsieh MJ, Liu HT, Wang CN, et al.",
+          "year": 2017,
+          "venue": "Journal of Molecular Medicine",
+          "kind": "in-vitro",
+          "doi": "10.1007/s00109-016-1488-y",
+          "pmid": "27847966",
+          "url": "https://doi.org/10.1007/s00109-016-1488-y"
+        },
+        {
+          "title": "Emerging Use of BPC-157 in Orthopaedic Sports Medicine: A Systematic Review",
+          "authors": "Vasireddi N, Hahamyan H, Salata MJ, Karns M, Calcei JG, Voos JE, Apostolakos JM",
+          "year": 2025,
+          "venue": "HSS Journal",
+          "kind": "meta",
+          "doi": "10.1177/15563316251355551",
+          "pmid": "40756949",
+          "url": "https://doi.org/10.1177/15563316251355551"
+        }
+      ]
+    },
+    {
+      "slug": "caffeine",
+      "evidence_level": "A",
+      "evidence_note": "Extensive trial evidence for performance; sleep effects are well established.",
+      "research_summary": "Caffeine improves endurance, strength and power output at 3-6 mg/kg. It has a 5-6 hour half-life, so afternoon intake costs sleep quality.",
+      "claims": [
+        {
+          "text": "Caffeine at 3-6 mg/kg improves endurance performance and muscular strength and power.",
+          "level": "A",
+          "status": "established"
+        },
+        {
+          "text": "Caffeine intake in the afternoon and evening impairs sleep quality and duration.",
+          "level": "B",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "International society of sports nutrition position stand: caffeine and exercise performance.",
+          "authors": "Guest NS, VanDusseldorp TA, Nelson MT",
+          "year": 2021,
+          "venue": "J Int Soc Sports Nutr",
+          "kind": "review",
+          "doi": "10.1186/s12970-020-00383-4",
+          "pmid": "33388079",
+          "url": "https://doi.org/10.1186/s12970-020-00383-4"
+        },
+        {
+          "title": "Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis.",
+          "authors": "Grgic J, Trexler ET, Lazinica B",
+          "year": 2018,
+          "venue": "J Int Soc Sports Nutr",
+          "kind": "meta",
+          "doi": "10.1186/s12970-018-0216-0",
+          "pmid": "29527137",
+          "url": "https://doi.org/10.1186/s12970-018-0216-0"
+        }
+      ]
+    },
+    {
+      "slug": "cjc-1295",
+      "evidence_level": "D",
+      "evidence_note": "No human study of the no-DAC variant; evidence comes from the DAC version and register entries.",
+      "research_summary": "CJC-1295 without DAC is a short-acting GHRH analogue. The long half-life attributed to CJC-1295 comes from the DAC anchor, which this variant lacks; no peer-reviewed human trial exists for it.",
+      "claims": [
+        {
+          "text": "No peer-reviewed human trial exists for CJC-1295 without DAC.",
+          "level": "D",
+          "status": "established"
+        },
+        {
+          "text": "The long half-life of CJC-1295 comes from covalent albumin binding via the DAC anchor, which the no-DAC variant lacks.",
+          "level": "C",
+          "status": "established"
+        },
+        {
+          "text": "A single dose of the DAC version raised GH 2-10x for 6+ days and IGF-1 1.5-3x for 9-11 days.",
+          "level": "B",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Human growth hormone-releasing factor (hGRF)1-29-albumin bioconjugates activate the GRF receptor on the anterior pituitary in rats: identification of CJC-1295 as a long-lasting GRF analog",
+          "authors": "Jetté L, Léger R, Thibaudeau K, Benquet C, Robitaille M, Pellerin I, Paradis V, van Wyk P, Pham K, Bridon DP",
+          "year": 2005,
+          "venue": "Endocrinology",
+          "kind": "preclinical",
+          "doi": "10.1210/en.2004-1286",
+          "pmid": "15817669",
+          "url": "https://doi.org/10.1210/en.2004-1286"
+        },
+        {
+          "title": "Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting analog of GH-releasing hormone, in healthy adults",
+          "authors": "Teichman SL, Neale A, Lawrence B, Gagnon C, Castaigne JP, Frohman LA",
+          "year": 2006,
+          "venue": "The Journal of Clinical Endocrinology and Metabolism",
+          "kind": "rct",
+          "doi": "10.1210/jc.2005-1536",
+          "pmid": "16352683",
+          "url": "https://doi.org/10.1210/jc.2005-1536"
+        },
+        {
+          "title": "Pulsatile secretion of growth hormone (GH) persists during continuous stimulation by CJC-1295, a long-acting GH-releasing hormone analog",
+          "authors": "Ionescu M, Frohman LA",
+          "year": 2006,
+          "venue": "The Journal of Clinical Endocrinology and Metabolism",
+          "kind": "other",
+          "doi": "10.1210/jc.2006-1702",
+          "pmid": "17018654",
+          "url": "https://doi.org/10.1210/jc.2006-1702"
+        },
+        {
+          "title": "The emerging landscape of performance-enhancing peptides modulating GH-IGF1 axis: bridging the gap between clinical evidence and patient self-administration",
+          "authors": "Dominikowski A, Rękoś Z, Olejarz M, Szczepanek-Parulska E, Domin R, Ruchała M",
+          "year": 2026,
+          "venue": "Frontiers in Endocrinology",
+          "kind": "review",
+          "doi": "10.3389/fendo.2026.1822475",
+          "pmid": "42395176",
+          "url": "https://doi.org/10.3389/fendo.2026.1822475"
+        }
+      ]
+    },
+    {
+      "slug": "creatine",
+      "evidence_level": "A",
+      "evidence_note": "Large body of randomized trials and a position stand; long-term safety at standard doses.",
+      "research_summary": "Creatine monohydrate is the best-supported ergogenic supplement. It raises muscle phosphocreatine and improves strength and lean mass gains alongside resistance training.",
+      "claims": [
+        {
+          "text": "Creatine supplementation increases muscle phosphocreatine and improves strength and hypertrophy with resistance training.",
+          "level": "A",
+          "status": "established"
+        },
+        {
+          "text": "Long-term use at 3-5 g/day is safe in healthy adults in the reviewed literature.",
+          "level": "A",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine.",
+          "authors": "Kreider RB, Kalman DS, Antonio J",
+          "year": 2017,
+          "venue": "J Int Soc Sports Nutr",
+          "kind": "review",
+          "doi": "10.1186/s12970-017-0173-z",
+          "pmid": "28615996",
+          "url": "https://doi.org/10.1186/s12970-017-0173-z"
+        }
+      ]
+    },
+    {
+      "slug": "ghk-cu",
+      "evidence_level": "C",
+      "evidence_note": "Cell culture and rat models; no controlled human trial for skin outcomes.",
+      "research_summary": "GHK-Cu is a copper tripeptide studied for skin repair. Fibroblast and wound-chamber models show collagen effects, while intact human skin absorbs almost none of it without penetration enhancement.",
+      "claims": [
+        {
+          "text": "GHK-Cu increased collagen synthesis in fibroblast cultures with an optimum near 10^-9 M.",
+          "level": "D",
+          "status": "plausible"
+        },
+        {
+          "text": "No controlled clinical trial of topical GHK-Cu in humans exists.",
+          "level": "C",
+          "status": "established"
+        },
+        {
+          "text": "Ex-vivo human skin absorbed almost no GHK-Cu without microneedle pretreatment.",
+          "level": "D",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stimulation of collagen synthesis in fibroblast cultures by the tripeptide-copper complex glycyl-L-histidyl-l-lysine-Cu2+",
+          "authors": "Maquart FX, Pickart L, Laurent M, Gillery P, Monboisse JC, Borel JP",
+          "year": 1988,
+          "venue": "FEBS Letters",
+          "kind": "in-vitro",
+          "doi": "10.1016/0014-5793(88)80509-x",
+          "pmid": "3169264",
+          "url": "https://doi.org/10.1016/0014-5793(88)80509-x"
+        },
+        {
+          "title": "In vivo stimulation of connective tissue accumulation by the tripeptide-copper complex glycyl-L-histidyl-L-lysine-Cu2+ in rat experimental wounds",
+          "authors": "Maquart FX, Bellon G, Chaqour B, et al.",
+          "year": 1993,
+          "venue": "Journal of Clinical Investigation",
+          "kind": "preclinical",
+          "doi": "10.1172/JCI116842",
+          "pmid": "8227353",
+          "url": "https://doi.org/10.1172/JCI116842"
+        },
+        {
+          "title": "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data",
+          "authors": "Pickart L, Margolina A",
+          "year": 2018,
+          "venue": "International Journal of Molecular Sciences",
+          "kind": "review",
+          "doi": "10.3390/ijms19071987",
+          "pmid": "29986520",
+          "url": "https://doi.org/10.3390/ijms19071987"
+        },
+        {
+          "title": "Human skin penetration of a copper tripeptide in vitro as a function of skin layer",
+          "authors": "Hostynek JJ, Dreher F, Maibach HI",
+          "year": 2011,
+          "venue": "Inflammation Research",
+          "kind": "in-vitro",
+          "doi": "10.1007/s00011-010-0238-9",
+          "pmid": "20721598",
+          "url": "https://doi.org/10.1007/s00011-010-0238-9"
+        }
+      ]
+    },
+    {
+      "slug": "ipamorelin",
+      "evidence_level": "C",
+      "evidence_note": "Receptor selectivity is measured in animals; small human studies and one failed phase-2 trial.",
+      "research_summary": "Ipamorelin is a selective growth hormone secretagogue. It releases GH through the ghrelin receptor with little ACTH or cortisol effect in pigs, but human data are small and a phase-2 trial missed its endpoint.",
+      "claims": [
+        {
+          "text": "Ipamorelin releases growth hormone via the ghrelin receptor GHS-R1a.",
+          "level": "B",
+          "status": "established"
+        },
+        {
+          "text": "In pigs, ipamorelin did not significantly raise ACTH or cortisol even above 200 times the GH ED50.",
+          "level": "C",
+          "status": "established"
+        },
+        {
+          "text": "A phase-2 trial in postoperative ileus missed its efficacy endpoint.",
+          "level": "B",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ipamorelin, the first selective growth hormone secretagogue",
+          "authors": "Raun K, Hansen BS, Johansen NL, Thøgersen H, Madsen K, Ankersen M, Andersen PH",
+          "year": 1998,
+          "venue": "European Journal of Endocrinology",
+          "kind": "preclinical",
+          "doi": "10.1530/eje.0.1390552",
+          "pmid": "9849822",
+          "url": "https://doi.org/10.1530/eje.0.1390552"
+        },
+        {
+          "title": "Pharmacokinetic-pharmacodynamic modeling of ipamorelin, a growth hormone releasing peptide, in human volunteers",
+          "authors": "Gobburu JV, Agersø H, Jusko WJ, Ynddal L",
+          "year": 1999,
+          "venue": "Pharmaceutical Research",
+          "kind": "other",
+          "doi": "10.1023/a:1018955126402",
+          "pmid": "10496658",
+          "url": "https://doi.org/10.1023/a:1018955126402"
+        },
+        {
+          "title": "Prospective, randomized, controlled, proof-of-concept study of the Ghrelin mimetic ipamorelin for the management of postoperative ileus in bowel resection patients",
+          "authors": "Beck DE, Sweeney WB, McCarter MD, Ipamorelin 201 Study Group",
+          "year": 2014,
+          "venue": "International Journal of Colorectal Disease",
+          "kind": "rct",
+          "doi": "10.1007/s00384-014-2030-8",
+          "pmid": "25331030",
+          "url": "https://doi.org/10.1007/s00384-014-2030-8"
+        },
+        {
+          "title": "The emerging landscape of performance-enhancing peptides modulating GH-IGF1 axis: bridging the gap between clinical evidence and patient self-administration",
+          "authors": "Dominikowski A, Rękoś Z, Olejarz M, Szczepanek-Parulska E, Domin R, Ruchała M",
+          "year": 2026,
+          "venue": "Frontiers in Endocrinology",
+          "kind": "review",
+          "doi": "10.3389/fendo.2026.1822475",
+          "pmid": "42395176",
+          "url": "https://doi.org/10.3389/fendo.2026.1822475"
+        }
+      ]
+    },
+    {
+      "slug": "iron",
+      "evidence_level": "A",
+      "evidence_note": "Clear evidence in documented deficiency; risky without lab confirmation.",
+      "research_summary": "Iron works, but only when iron deficiency is present. Alternate-day dosing improves absorption over consecutive-day dosing, and bisglycinate is better tolerated than sulfate.",
+      "claims": [
+        {
+          "text": "Alternate-day iron dosing improves fractional absorption compared with consecutive days.",
+          "level": "A",
+          "status": "established"
+        },
+        {
+          "text": "Ferrous bisglycinate raises hemoglobin comparably to other oral iron salts with fewer gastrointestinal effects.",
+          "level": "B",
+          "status": "plausible"
+        },
+        {
+          "text": "Dose and duration determine hemoglobin response; higher doses are not automatically better.",
+          "level": "B",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Iron absorption from oral iron supplements given on consecutive versus alternate days and as single morning doses versus twice-daily split dosing in iron-depleted women: two open-label, randomised controlled trials.",
+          "authors": "Stoffel NU, Cercamondi CI, Brittenham G",
+          "year": 2017,
+          "venue": "Lancet Haematol",
+          "kind": "rct",
+          "doi": "10.1016/S2352-3026(17)30182-5",
+          "pmid": "29032957",
+          "url": "https://doi.org/10.1016/S2352-3026(17)30182-5"
+        },
+        {
+          "title": "The effects of oral ferrous bisglycinate supplementation on hemoglobin and ferritin concentrations in adults and children: a systematic review and meta-analysis of randomized controlled trials.",
+          "authors": "Fischer JAJ, Cherian AM, Bone JN",
+          "year": 2023,
+          "venue": "Nutr Rev",
+          "kind": "meta",
+          "doi": "10.1093/nutrit/nuac106",
+          "pmid": "36728680",
+          "url": "https://doi.org/10.1093/nutrit/nuac106"
+        },
+        {
+          "title": "Optimal dose and duration of iron supplementation for treating iron deficiency anaemia in children and adolescents: A systematic review and meta-analysis.",
+          "authors": "Rehman T, Agrawal R, Ahamed F",
+          "year": 2025,
+          "venue": "PLoS One",
+          "kind": "meta",
+          "doi": "10.1371/journal.pone.0319068",
+          "pmid": "39951396",
+          "url": "https://doi.org/10.1371/journal.pone.0319068"
+        }
+      ]
+    },
+    {
+      "slug": "magnesium",
+      "evidence_level": "B",
+      "evidence_note": "Multiple randomized trials with small effect sizes and heterogeneous formulations.",
+      "research_summary": "Magnesium supplementation lowers blood pressure modestly and may help sleep quality in older adults. Muscle performance effects are small and inconsistent across trials and salt forms.",
+      "claims": [
+        {
+          "text": "Oral magnesium lowers systolic and diastolic blood pressure by a small margin.",
+          "level": "B",
+          "status": "established"
+        },
+        {
+          "text": "Magnesium supplementation may improve insomnia measures in older adults.",
+          "level": "B",
+          "status": "plausible"
+        },
+        {
+          "text": "Effects on muscle strength and power are small and inconsistent.",
+          "level": "C",
+          "status": "plausible"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Effects of Magnesium Supplementation on Blood Pressure: A Meta-Analysis of Randomized Double-Blind Placebo-Controlled Trials.",
+          "authors": "Zhang X, Li Y, Del Gobbo LC",
+          "year": 2016,
+          "venue": "Hypertension",
+          "kind": "meta",
+          "doi": "10.1161/HYPERTENSIONAHA.116.07664",
+          "pmid": "27402922",
+          "url": "https://doi.org/10.1161/HYPERTENSIONAHA.116.07664"
+        },
+        {
+          "title": "Oral magnesium supplementation for insomnia in older adults: a Systematic Review & Meta-Analysis.",
+          "authors": "Mah J, Pitre T",
+          "year": 2021,
+          "venue": "BMC Complement Med Ther",
+          "kind": "meta",
+          "doi": "10.1186/s12906-021-03297-z",
+          "pmid": "33865376",
+          "url": "https://doi.org/10.1186/s12906-021-03297-z"
+        },
+        {
+          "title": "The effect of magnesium supplementation on muscle fitness: a meta-analysis and systematic review.",
+          "authors": "Wang R, Chen C, Liu W",
+          "year": 2017,
+          "venue": "Magnes Res",
+          "kind": "meta",
+          "doi": "10.1684/mrh.2018.0430",
+          "pmid": "29637897",
+          "url": "https://doi.org/10.1684/mrh.2018.0430"
+        }
+      ]
+    },
+    {
+      "slug": "multivitamin",
+      "evidence_level": "C",
+      "evidence_note": "One large trial for cognition; cardiovascular data is observational and mixed.",
+      "research_summary": "A daily multivitamin-mineral is a low-dose baseline for people with limited diet variety. Trials support a small cognitive effect in older adults, while long-term cardiovascular benefit remains unproven.",
+      "claims": [
+        {
+          "text": "Daily multivitamin-mineral use improved memory performance in older adults in a randomized trial.",
+          "level": "B",
+          "status": "plausible"
+        },
+        {
+          "text": "Cohort data do not show lower cardiovascular risk with multivitamin use.",
+          "level": "B",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Multivitamin Supplementation Improves Memory in Older Adults: A Randomized Clinical Trial.",
+          "authors": "Yeung LK, Alschuler DM, Wall M",
+          "year": 2023,
+          "venue": "Am J Clin Nutr",
+          "kind": "rct",
+          "doi": "10.1016/j.ajcnut.2023.05.011",
+          "pmid": "37244291",
+          "url": "https://doi.org/10.1016/j.ajcnut.2023.05.011"
+        },
+        {
+          "title": "Association of Multivitamin and Mineral Supplementation and Risk of Cardiovascular Disease: A Systematic Review and Meta-Analysis.",
+          "authors": "Kim J, Choi J, Kwon SY",
+          "year": 2018,
+          "venue": "Circ Cardiovasc Qual Outcomes",
+          "kind": "meta",
+          "doi": "10.1161/CIRCOUTCOMES.117.004224",
+          "pmid": "29991644",
+          "url": "https://doi.org/10.1161/CIRCOUTCOMES.117.004224"
+        }
+      ]
+    },
+    {
+      "slug": "omega-3",
+      "evidence_level": "A",
+      "evidence_note": "Many large trials; event reduction is small and depends on dose, baseline intake and formulation.",
+      "research_summary": "Marine omega-3 lowers triglycerides and has modest effects on cardiovascular events. Large trials with 1 g/day in generally healthy adults found no reduction in major events.",
+      "claims": [
+        {
+          "text": "Omega-3 supplementation lowers triglycerides; the effect on cardiovascular events is small and dose-dependent.",
+          "level": "A",
+          "status": "established"
+        },
+        {
+          "text": "1 g/day of marine omega-3 did not reduce major cardiovascular events in generally healthy adults.",
+          "level": "A",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease.",
+          "authors": "Abdelhamid AS, Brown TJ, Brainard JS",
+          "year": 2020,
+          "venue": "Cochrane Database Syst Rev",
+          "kind": "meta",
+          "doi": "10.1002/14651858.CD003177.pub5",
+          "pmid": "32114706",
+          "url": "https://doi.org/10.1002/14651858.CD003177.pub5"
+        },
+        {
+          "title": "Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer.",
+          "authors": "Manson JE, Cook NR, Lee IM",
+          "year": 2019,
+          "venue": "N Engl J Med",
+          "kind": "rct",
+          "doi": "10.1056/NEJMoa1811403",
+          "pmid": "30415637",
+          "url": "https://doi.org/10.1056/NEJMoa1811403"
+        },
+        {
+          "title": "Update on Omega-3 Polyunsaturated Fatty Acids on Cardiovascular Health.",
+          "authors": "Rodriguez D, Lavie CJ, Elagizi A",
+          "year": 2022,
+          "venue": "Nutrients",
+          "kind": "meta",
+          "doi": "10.3390/nu14235146",
+          "pmid": "36501174",
+          "url": "https://doi.org/10.3390/nu14235146"
+        }
+      ]
+    },
+    {
+      "slug": "selank",
+      "evidence_level": "C",
+      "evidence_note": "One small Russian comparison study without placebo plus mostly Russian preclinical work.",
+      "research_summary": "Selank is an anxiolytic peptide registered in Russia as a nasal spray. A small comparison study found effects comparable to medazepam, but independent replication and placebo-controlled trials are missing.",
+      "claims": [
+        {
+          "text": "A small Russian comparison study (n=62) found selank roughly as effective as medazepam for generalised anxiety, without a placebo arm.",
+          "level": "C",
+          "status": "plausible"
+        },
+        {
+          "text": "Selank is registered in Russia; independent replication of its clinical effects is missing.",
+          "level": "C",
+          "status": "established"
+        },
+        {
+          "text": "In cell culture, selank shifts expression of GABAergic genes.",
+          "level": "D",
+          "status": "speculative"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Efficacy and possible mechanisms of action of a new peptide anxiolytic selank in the therapy of generalized anxiety disorders and neurasthenia",
+          "authors": "Zozulia AA, Neznamov GG, Siuniakov TS, et al.",
+          "year": 2008,
+          "venue": "Zhurnal Nevrologii i Psikhiatrii imeni S.S. Korsakova",
+          "kind": "other",
+          "doi": null,
+          "pmid": "18454096",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18454096/"
+        },
+        {
+          "title": "GABA, Selank, and Olanzapine Affect the Expression of Genes Involved in GABAergic Neurotransmission in IMR-32 Cells.",
+          "authors": "Filatova E, Kasian A, Kolomin T, et al.",
+          "year": 2017,
+          "venue": "Frontiers in Pharmacology",
+          "kind": "in-vitro",
+          "doi": "10.3389/fphar.2017.00089",
+          "pmid": "28293190",
+          "url": "https://doi.org/10.3389/fphar.2017.00089"
+        },
+        {
+          "title": "Selank, Peptide Analogue of Tuftsin, Protects Against Ethanol-Induced Memory Impairment by Regulating of BDNF Content in the Hippocampus and Prefrontal Cortex in Rats.",
+          "authors": "Kolik LG, Nadorova AV, Antipova TA, et al.",
+          "year": 2019,
+          "venue": "Bulletin of Experimental Biology and Medicine",
+          "kind": "preclinical",
+          "doi": "10.1007/s10517-019-04588-9",
+          "pmid": "31625062",
+          "url": "https://doi.org/10.1007/s10517-019-04588-9"
+        },
+        {
+          "title": "Sedative-Hypnotic Agents That Impact Gamma-Aminobutyric Acid Receptors: Focus on Flunitrazepam, Gamma-Hydroxybutyric Acid, Phenibut, and Selank.",
+          "authors": "Doyno CR, White CM",
+          "year": 2021,
+          "venue": "Journal of Clinical Pharmacology",
+          "kind": "review",
+          "doi": "10.1002/jcph.1922",
+          "pmid": "34396551",
+          "url": "https://doi.org/10.1002/jcph.1922"
+        }
+      ]
+    },
+    {
+      "slug": "semax",
+      "evidence_level": "C",
+      "evidence_note": "Rodent data from a narrow research network plus small open human studies.",
+      "research_summary": "Semax is an ACTH(4-10) analogue registered in Russia for acute ischaemic stroke. Rodent studies show BDNF and trkB increases, but blinded placebo-controlled human data are missing.",
+      "claims": [
+        {
+          "text": "In rats, semax increases BDNF and trkB expression in the hippocampus.",
+          "level": "C",
+          "status": "plausible"
+        },
+        {
+          "text": "Semax is registered in Russia for acute ischaemic stroke and is not approved in the EU or US.",
+          "level": "C",
+          "status": "established"
+        },
+        {
+          "text": "Small open-label Russian studies report faster BDNF rise and recovery after stroke.",
+          "level": "C",
+          "status": "plausible"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Semax, an analog of ACTH(4-10) with cognitive effects, regulates BDNF and trkB expression in the rat hippocampus.",
+          "authors": "Dolotov OV, Karpenko EA, Inozemtseva LS, et al.",
+          "year": 2006,
+          "venue": "Brain Research",
+          "kind": "preclinical",
+          "doi": "10.1016/j.brainres.2006.07.108",
+          "pmid": "16996037",
+          "url": "https://doi.org/10.1016/j.brainres.2006.07.108"
+        },
+        {
+          "title": "Semax, an analogue of adrenocorticotropin (4-10), binds specifically and increases levels of brain-derived neurotrophic factor protein in rat basal forebrain.",
+          "authors": "Dolotov OV, Karpenko EA, Seredenina TS, et al.",
+          "year": 2006,
+          "venue": "Journal of Neurochemistry",
+          "kind": "preclinical",
+          "doi": "10.1111/j.1471-4159.2006.03658.x",
+          "pmid": "16635254",
+          "url": "https://doi.org/10.1111/j.1471-4159.2006.03658.x"
+        },
+        {
+          "title": "The efficacy of semax in the treatment of patients at different stages of ischemic stroke",
+          "authors": "Gusev EI, Martynov MY, Kostenko EV, et al.",
+          "year": 2018,
+          "venue": "Zhurnal Nevrologii i Psikhiatrii imeni S.S. Korsakova",
+          "kind": "other",
+          "doi": "10.17116/jnevro20181183261-68",
+          "pmid": "29798983",
+          "url": "https://doi.org/10.17116/jnevro20181183261-68"
+        },
+        {
+          "title": "Semax peptide targets the μ opioid receptor gene Oprm1 to promote deubiquitination and functional recovery after spinal cord injury in female mice.",
+          "authors": "Liu R, Chen Y, Huang H, et al.",
+          "year": 2025,
+          "venue": "British Journal of Pharmacology",
+          "kind": "preclinical",
+          "doi": "10.1111/bph.70122",
+          "pmid": "40692165",
+          "url": "https://doi.org/10.1111/bph.70122"
+        }
+      ]
+    },
+    {
+      "slug": "tb-500",
+      "evidence_level": "C",
+      "evidence_note": "Thin animal data; no human study; part of the cited healing data used another molecule.",
+      "research_summary": "TB-500 is a fragment of thymosin beta-4 marketed for recovery. One randomized rat study supports tendon healing, but no human study exists and some commonly cited data used a different fragment.",
+      "claims": [
+        {
+          "text": "In a randomized rat study, TB-500 increased load-to-failure of healing Achilles tendons.",
+          "level": "C",
+          "status": "plausible"
+        },
+        {
+          "text": "No published study has administered TB-500 to humans.",
+          "level": "C",
+          "status": "established"
+        },
+        {
+          "text": "Wound-healing data often attributed to TB-500 were generated with a different fragment (LKKTETQ).",
+          "level": "D",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Doping control analysis of TB-500, a synthetic version of an active region of thymosin β4, in equine urine and plasma by liquid chromatography-mass spectrometry",
+          "authors": "Ho EN, Kwok WH, Lau MY, et al.",
+          "year": 2012,
+          "venue": "Journal of Chromatography A",
+          "kind": "preclinical",
+          "doi": "10.1016/j.chroma.2012.09.043",
+          "pmid": "23084823",
+          "url": "https://doi.org/10.1016/j.chroma.2012.09.043"
+        },
+        {
+          "title": "Simultaneous quantification of TB-500 and its metabolites in in-vitro experiments and rats by UHPLC-Q-Exactive orbitrap MS/MS and their screening by wound healing activities in-vitro",
+          "authors": "Rahaman KA, Muresan AR, Min H, et al.",
+          "year": 2024,
+          "venue": "Journal of Chromatography B",
+          "kind": "in-vitro",
+          "doi": "10.1016/j.jchromb.2024.124033",
+          "pmid": "38382158",
+          "url": "https://doi.org/10.1016/j.jchromb.2024.124033"
+        },
+        {
+          "title": "Effects of BPC-157 and TB-500 on Achilles tendon healing in rats: A histopathological and biomechanical study",
+          "authors": "Biçer O, Adanir O, Güleryüz Y, et al.",
+          "year": 2026,
+          "venue": "Joint Diseases and Related Surgery",
+          "kind": "preclinical",
+          "doi": "10.52312/jdrs.2026.2951",
+          "pmid": "42542926",
+          "url": "https://doi.org/10.52312/jdrs.2026.2951"
+        },
+        {
+          "title": "Thymosin β4 Promotes Dermal Healing",
+          "authors": "Kleinman HK, Sosne G",
+          "year": 2016,
+          "venue": "Vitamins and Hormones",
+          "kind": "review",
+          "doi": "10.1016/bs.vh.2016.04.005",
+          "pmid": "27450738",
+          "url": "https://doi.org/10.1016/bs.vh.2016.04.005"
+        }
+      ]
+    },
+    {
+      "slug": "vitamin-c",
+      "evidence_level": "B",
+      "evidence_note": "Cochrane reviews and mechanistic work; benefits are modest outside deficiency.",
+      "research_summary": "Vitamin C supports immune cell function and collagen synthesis. Regular supplementation does not prevent colds in the general population but may shorten them slightly; deficiency is the main case for replacement.",
+      "claims": [
+        {
+          "text": "Regular vitamin C does not prevent colds in the general population, but may shorten duration by a small amount.",
+          "level": "A",
+          "status": "established"
+        },
+        {
+          "text": "Vitamin C accumulates in immune cells and supports several immune functions.",
+          "level": "C",
+          "status": "plausible"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Vitamin C for preventing and treating the common cold.",
+          "authors": "Hemilä H, Chalker E",
+          "year": 2013,
+          "venue": "Cochrane Database Syst Rev",
+          "kind": "meta",
+          "doi": "10.1002/14651858.CD000980.pub4",
+          "pmid": "23440782",
+          "url": "https://doi.org/10.1002/14651858.CD000980.pub4"
+        },
+        {
+          "title": "Vitamin C and Immune Function.",
+          "authors": "Carr AC, Maggini S",
+          "year": 2017,
+          "venue": "Nutrients",
+          "kind": "review",
+          "doi": "10.3390/nu9111211",
+          "pmid": "29099763",
+          "url": "https://doi.org/10.3390/nu9111211"
+        },
+        {
+          "title": "Effect of micronutrient supplements on influenza and other respiratory tract infections among adults: a systematic review and meta-analysis.",
+          "authors": "Abioye AI, Bromage S, Fawzi W",
+          "year": 2021,
+          "venue": "BMJ Glob Health",
+          "kind": "meta",
+          "doi": "10.1136/bmjgh-2020-003176",
+          "pmid": "33472840",
+          "url": "https://doi.org/10.1136/bmjgh-2020-003176"
+        }
+      ]
+    },
+    {
+      "slug": "vitamin-d3",
+      "evidence_level": "A",
+      "evidence_note": "Large randomized trials exist, but benefits concentrate in people with low status.",
+      "research_summary": "Vitamin D3 matters most when intake and sun exposure are low. Fracture reduction appears in deficient and older populations, while supplementation in generally replete adults does not prevent cancer or cardiovascular events.",
+      "claims": [
+        {
+          "text": "Vitamin D plus calcium reduces fracture risk in older adults, with the clearest effect in people with low vitamin D status.",
+          "level": "B",
+          "status": "established"
+        },
+        {
+          "text": "2000 IU/day did not reduce invasive cancer or cardiovascular events in generally healthy adults in the VITAL trial.",
+          "level": "A",
+          "status": "established"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Supplemental Vitamin D and Incident Fractures in Midlife and Older Adults.",
+          "authors": "LeBoff MS, Chou SH, Ratliff KA",
+          "year": 2022,
+          "venue": "N Engl J Med",
+          "kind": "rct",
+          "doi": "10.1056/NEJMoa2202106",
+          "pmid": "35939577",
+          "url": "https://doi.org/10.1056/NEJMoa2202106"
+        },
+        {
+          "title": "Association Between Calcium or Vitamin D Supplementation and Fracture Incidence in Community-Dwelling Older Adults: A Systematic Review and Meta-analysis.",
+          "authors": "Zhao JG, Zeng XT, Wang J",
+          "year": 2017,
+          "venue": "JAMA",
+          "kind": "meta",
+          "doi": "10.1001/jama.2017.19344",
+          "pmid": "29279934",
+          "url": "https://doi.org/10.1001/jama.2017.19344"
+        },
+        {
+          "title": "Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease.",
+          "authors": "Manson JE, Cook NR, Lee IM",
+          "year": 2019,
+          "venue": "N Engl J Med",
+          "kind": "rct",
+          "doi": "10.1056/NEJMoa1809944",
+          "pmid": "30415629",
+          "url": "https://doi.org/10.1056/NEJMoa1809944"
+        }
+      ]
+    },
+    {
+      "slug": "vitamin-k2",
+      "evidence_level": "B",
+      "evidence_note": "Two randomized trials with surrogate endpoints in postmenopausal women.",
+      "research_summary": "Menaquinone-7 (MK-7) has randomized evidence for bone density and arterial stiffness markers. Hard clinical outcomes such as fractures have not been tested in large trials.",
+      "claims": [
+        {
+          "text": "Three years of MK-7 supplementation slowed bone mineral density loss in healthy postmenopausal women.",
+          "level": "B",
+          "status": "established"
+        },
+        {
+          "text": "MK-7 improved arterial stiffness markers in a randomized trial of postmenopausal women.",
+          "level": "B",
+          "status": "plausible"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Three-year low-dose menaquinone-7 supplementation helps decrease bone loss in healthy postmenopausal women.",
+          "authors": "Knapen MH, Drummen NE, Smit E",
+          "year": 2013,
+          "venue": "Osteoporos Int",
+          "kind": "rct",
+          "doi": "10.1007/s00198-013-2325-6",
+          "pmid": "23525894",
+          "url": "https://doi.org/10.1007/s00198-013-2325-6"
+        },
+        {
+          "title": "Menaquinone-7 supplementation improves arterial stiffness in healthy postmenopausal women. A double-blind randomised clinical trial.",
+          "authors": "Knapen MH, Braam LA, Drummen NE",
+          "year": 2015,
+          "venue": "Thromb Haemost",
+          "kind": "rct",
+          "doi": "10.1160/TH14-08-0675",
+          "pmid": "25694037",
+          "url": "https://doi.org/10.1160/TH14-08-0675"
+        }
+      ]
+    },
+    {
+      "slug": "whey",
+      "evidence_level": "A",
+      "evidence_note": "Protein supplementation evidence is strong; whey is one delivery form.",
+      "research_summary": "Protein supplementation increases lean mass and strength gains alongside resistance training. Whey is a convenient source; total daily protein intake matters more than the form.",
+      "claims": [
+        {
+          "text": "Protein supplementation adds lean mass and strength gains on top of resistance training, with diminishing returns at high baseline intake.",
+          "level": "A",
+          "status": "established"
+        },
+        {
+          "text": "Whey protein improves sarcopenia-related measures in older adults, with modest effect sizes.",
+          "level": "B",
+          "status": "plausible"
+        }
+      ],
+      "sources": [
+        {
+          "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults.",
+          "authors": "Morton RW, Murphy KT, McKellar SR",
+          "year": 2018,
+          "venue": "Br J Sports Med",
+          "kind": "meta",
+          "doi": "10.1136/bjsports-2017-097608",
+          "pmid": "28698222",
+          "url": "https://doi.org/10.1136/bjsports-2017-097608"
+        },
+        {
+          "title": "Whey Protein Supplementation with or without Vitamin D on Sarcopenia-Related Measures: A Systematic Review and Meta-Analysis.",
+          "authors": "Nasimi N, Sohrabi Z, Nunes EA",
+          "year": 2023,
+          "venue": "Adv Nutr",
+          "kind": "meta",
+          "doi": "10.1016/j.advnut.2023.05.011",
+          "pmid": "37196876",
+          "url": "https://doi.org/10.1016/j.advnut.2023.05.011"
+        }
+      ]
+    },
+    {
+      "slug": "zinc",
+      "evidence_level": "B",
+      "evidence_note": "Randomized evidence for lozenges in adults; long-term high-dose safety limits are clear.",
+      "research_summary": "Zinc lozenges started within 24 hours can shorten a cold. Chronic intake above 40 mg/day risks copper deficiency and should be avoided without a reason and monitoring.",
+      "claims": [
+        {
+          "text": "Zinc acetate lozenges shorten common-cold duration when started within the first day of symptoms.",
+          "level": "B",
+          "status": "established"
+        },
+        {
+          "text": "High-dose zinc lozenges reduce several cold symptoms in adults.",
+          "level": "B",
+          "status": "plausible"
+        },
+        {
+          "text": "Micronutrient supplementation has small and inconsistent effects on respiratory infection risk.",
+          "level": "C",
+          "status": "plausible"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Zinc acetate lozenges for treating the common cold: an individual patient data meta-analysis.",
+          "authors": "Hemilä H, Petrus EJ, Fitzgerald JT",
+          "year": 2016,
+          "venue": "Br J Clin Pharmacol",
+          "kind": "meta",
+          "doi": "10.1111/bcp.13057",
+          "pmid": "27378206",
+          "url": "https://doi.org/10.1111/bcp.13057"
+        },
+        {
+          "title": "The effectiveness of high dose zinc acetate lozenges on various common cold symptoms: a meta-analysis.",
+          "authors": "Hemilä H, Chalker E",
+          "year": 2015,
+          "venue": "BMC Fam Pract",
+          "kind": "meta",
+          "doi": "10.1186/s12875-015-0237-6",
+          "pmid": "25888289",
+          "url": "https://doi.org/10.1186/s12875-015-0237-6"
+        },
+        {
+          "title": "Effect of micronutrient supplements on influenza and other respiratory tract infections among adults: a systematic review and meta-analysis.",
+          "authors": "Abioye AI, Bromage S, Fawzi W",
+          "year": 2021,
+          "venue": "BMJ Glob Health",
+          "kind": "meta",
+          "doi": "10.1136/bmjgh-2020-003176",
+          "pmid": "33472840",
+          "url": "https://doi.org/10.1136/bmjgh-2020-003176"
+        }
+      ]
+    }
+  ]
+}

@@ -10,3 +10,6 @@ web/.vite/
 *.log
 .DS_Store
 .tools/
+
+# local credential drops, never commit
+apiforenv.txt

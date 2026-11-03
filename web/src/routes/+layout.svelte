@@ -28,6 +28,12 @@
       </span>
     </a>
     <nav class="flex items-center gap-2 text-sm sm:gap-3">
+      <a
+        href="/evidence"
+        class="rounded-lg px-3 py-2 text-slate-700 no-underline hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+      >
+        Library
+      </a>
       {#if signedIn}
         <a
           href="/dashboard"

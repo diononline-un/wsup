@@ -13,6 +13,8 @@ Brand: **WSUP** (spoken: W-S-U-P). Descriptor: Supplement Stack Calculator.
 - Settings (`/settings`): theme (system/light/dark), JSON data export, account deletion with password re-check.
 - Dark mode: follows the OS by default, toggle in the header, choice stored per browser.
 - PocketBase schema for the full PRD data model plus 20 seed substances and 6 interactions.
+- Evidence library (`/evidence`, `/evidence/<slug>`): research grade per substance, claim-level evidence badges and
+  linked papers. 20 substances, 60 sources, 50 claims in `research/evidence.json`.
 
 Not built yet: recommendation engine and confidence score, BYOS matching, ICS feeds, AI service,
 seed recovery, password change.
@@ -75,8 +77,12 @@ Tests: `cd web && npm test` (seed phrase, SHA-256, credential rules, scrypt hash
 `users` (extended), `user_secrets` (recovery hash), `user_profiles`, `substances`,
 `substance_interactions`, `user_stacks`, `calendar_feeds`. Seed data: 20 substances, 6 interactions.
 
-Account routes: `/signup`, `/login`, `/dashboard`, `/onboarding/profile`, `/settings`; API: `/api/signup`,
-`/api/account/export`, `/api/account/delete`.
+Account routes: `/signup`, `/login`, `/dashboard`, `/onboarding/profile`, `/settings`; public research:
+`/evidence`, `/evidence/<slug>`; API: `/api/signup`, `/api/account/export`, `/api/account/delete`.
+
+Research data: `research/evidence.json`, seeded by `pb_migrations/1757400003_research.js`. Peptide sources come
+from the rejuvia research portal; standard supplement references were fetched from PubMed (DOIs/PMIDs in the dataset).
+`research/README.md` documents the schema and the update workflow.
 
 ## Ports
 
