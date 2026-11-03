@@ -13,6 +13,14 @@
       await goto('/login')
       return
     }
+    try {
+      // refresh so plan changes (tier) show without a new login
+      await pb.collection('users').authRefresh()
+    } catch {
+      pb.authStore.clear()
+      await goto('/login')
+      return
+    }
     const record = pb.authStore.record as Record<string, unknown>
     username = String(record.username ?? '')
     tier = String(record.tier ?? 'basic')

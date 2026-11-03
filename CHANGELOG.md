@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-03 — Plan-Refresh im Dashboard, Pro-Freischaltung
+
+- Dashboard ruft `authRefresh()` auf: Tier-Änderungen (z. B. Pro-Freischaltung) sind nach dem Login sichtbar, ohne neu einzuloggen; ungültige Tokens führen zurück zum Login.
+- Account `happycappy` auf `tier = pro` gesetzt (kompensiert, kein Abo/keine Zahlung, kein Ablaufdatum im Datenmodell).
+- Headless geprüft: Pro-Account zeigt im Dashboard "Pro" und den Seed-Verified-Hinweis.
+
 ## 2026-11-03 — Tailscale-Zugriff und SHA-256 ohne WebCrypto
 
 - Beide Dev-Server binden `0.0.0.0`; Vite erlaubt den Tailscale-Host über `server.allowedHosts`, PocketBase läuft im Dev-Script mit `--automigrate=false`.
