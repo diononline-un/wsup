@@ -1,0 +1,12 @@
+node_modules/
+.tools/
+pb_data/
+.env
+.env.*
+!.env.example
+web/.svelte-kit/
+web/build/
+web/.vite/
+*.log
+.DS_Store
+.tools/

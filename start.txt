@@ -1,0 +1,67 @@
+Product Requirement Document (PRD)1. Executive Summary & Core ConceptProduktname: Supplement Stack Calculator (Arbeitstitel)Vision: Eine evidenzbasierte, AI-gestützte SaaS-Plattform zur Erstellung, Analyse und Optimierung persönlicher Supplement- und Peptid-Stacks. Das System integriert biologische Parameter, Lebensstil, Medikamentenwechselwirkungen und Zyklusdaten, um personalisierte Pläne und Einnahme-Timings (via ICS-Kalender-Abo) zu generieren.2. Business- & MonetarisierungsmodellDas Projekt wird rein als Cloud-SaaS (Multi-Tenant) betrieben. Es gibt kein Self-Hosting.Pricing TiersBasic Tier (Kostenlos / Limited):Zugriff auf den Stack-Calculator & den Confidence Score.Basis-Empfehlungen für Mikronährstoffe / Standard-Supplements.1x ICS-Kalender-Abo-Link (z. B. für den Haupt-Tagesstack).Standard AI-Anfragen (DeepSeek via OpenRouter).Cloud Pro Tier (Kostenpflichtiges Abo / Monthly & Yearly):Unbegrenzte Analyse komplexer Stacks inklusive Peptiden & Experimental Substanzen.Bis zu 3x ICS-Kalender-Abo-Links mit getrennten Zonen (z. B. Morning Stack, Pre-Workout, Night Routine).Erweiterte AI-Deep-Dives (Paper-Analysen, detaillierte Wechselwirkungs-Scans via OpenRouter / Claude / OpenAI).Power-User "Safety Override Mode" (Abschalten von Dosis-Mahnungen nach Bestätigung).Priorisierter Approval-Queue für eigene Community-Substanz-Einreichungen.Zusätzliche Revenue Stream: Affiliate- & Sourcing-Links zu geprüften Lieferanten für Inhaltsstoffe und Peptide.3. Tech Stack & Architektur                               ┌─────────────────────────────────────────────────┐
+                               │                 SvelteKit Frontend              │
+                               │             (Tailwind CSS, English-First)        │
+                               └────────────────────────┬────────────────────────┘
+                                                        │
+                                                        ▼
+                               ┌─────────────────────────────────────────────────┐
+                               │                PocketBase Backend               │
+                               │        (Auth, DB, Realtime, Multi-Tenant)       │
+                               └───────────┬─────────────────────────┬───────────┘
+                                           │                         │
+                                           ▼                         ▼
+            ┌──────────────────────────────────────────────┐   ┌───────────────────────────┐
+            │             Node.js AI / Service Layer       │   │    ICS Calendar Engine    │
+            │   (OpenRouter API, Paper Scraper Cronjobs)   │   │  (3 Custom Tokenized Feed)│
+            └──────────────────────┬───────────────────────┘   └───────────────────────────┘
+                                   │
+                                   ▼
+            ┌──────────────────────────────────────────────┐
+            │          Central Research Knowledge Graph    │
+            │        (Peptide Wiki DB + Research Papers)   │
+            └──────────────────────────────────────────────┘
+Frontend: SvelteKit + Tailwind CSS.Backend & DB: PocketBase (SQLite-basiert, performant für >3.000+ parallele User).AI Engine & Routing: Node.js Microservice angebunden an OpenRouter (Default: DeepSeek; Pro Option: Claude 3.5 Sonnet / GPT-4o).ICS Feed Generator: Token-basierter iCal-Service zur dynamischen Generierung von Kalender-Abos.4. Feature Specifications4.1 Security, Privacy & Anonymous Auth FlowKeine E-Mail-Adresse erforderlich.Registrierung: Nutzername (Eindeutigkeitsprüfung) + Passwort (Min. 8 Zeichen, 1x Groß, 1x Klein, 1x Sonderzeichen).Recovery Phrase: Generierung einer 25-Wörter Seed Phrase.Onboarding-Validierung:Automatisch generierter .txt-Download der Recovery Phrase.Pflicht-Eingabe von 3 bis 5 zufällig abgefragten Wörtern aus der Seed Phrase zur Verifizierung vor der ersten Session.4.2 User Input Parameters (Inclusive & Gender-Aware)Sprache & Einheiten: English-first. Metric System by default (Imperial umschaltbar).Körper- & Menschen-Parameter:Alter, Körpergröße, Gewicht.Biologisches Geschlecht (für Enzym-/Hormon-Metabolismus) & Identifiziertes Geschlecht (für Anrede/UX).Schlafmuster & -qualität (Biorhythmus-Logik).Aktivitätslevel & Sport.Koffeinkonsum & Substanzgebrauch.Aktuelle Medikamente (z. B. Bupropion/ADHS-Meds, Blutdrucksenker etc.).Wohnort / Land (zur Berechnung des UV-Index / D3-Bedarfs).Frauenspezifische Parameter: Zyklusregelmäßigkeit, Zyklusphase, spezifische Beschwerden (z. B. PMS, PCOS-Kontext).Vorerkrankungen & Allergien.Erklärungs-UX: Zu jedem Parameter gibt es ein Info-Icon (I) mit transparenter Begründung ("Why we ask this?").4.3 Confidence Score & Visuelle IndikatorenScore (0–100%): Zeigt die wissenschaftliche Fundierung der Empfehlung basierend auf der Vollständigkeit der Nutzereingaben.Farbskala & Erklärungs-UI:Grün: Hohe Datenvollständigkeit & hohe Evidenz.Gelb: Empfehlung basiert auf Annahmen (z. B. "D3 empfohlen, aber dein Wohnort fehlt – mit Angabe deines Landes wird die Dosierung exakter").Rot: Starke Interaktions- oder Überdosierungswarnung.4.4 Bring Your Own Stack (BYOS)Nutzer können ihre eigene tägliche Supp- & Peptid-Routine mit exakten Dosierungen eingeben.Matching Score: Vergleicht den bestehenden Stack mit dem AI-generierten Ideal-Stack (z. B. "82% Match").Redundanz- & Dosis-Checker: Mache Angaben zu Überdosierungen oder doppelter Einnahme (z. B. Zink in Multivitamin + Einzelpräparat).Safety Override Mode (Pro Feature): Mündige Nutzer (z. B. Bodybuilder) können Dosis-Warnungen (z. B. bei >10 IU HGH) dauerhaft stummschalten.4.5 Peptid- & Advanced-Substanzen-EbeneKeine künstliche Trennung zwischen "Nahrungsergänzung" und "Peptiden/Compounds".Pflicht-Disclaimer: Beim ersten Aufruf muss ein expliziter Haftungsausschluss bestätigt werden ("Platform for personal research & self-experimentation").Evidenz-Grading: Transparente Einstufung (Meta-Analysen vs. Humanstudien vs. Tierstudien vs. Anektodisch).Wissensbasis: Agent greift direkt auf das hinterlegte Peptid-Wiki & den Research-Knowledge-Graph zu.4.6 Automated Research Engine & Community SubmissionsScraper Cronjobs: Regelmäßige Scans via PubMed / Europe PMC auf neue Studien.Crowdsourced Submissions: User können neue Wirkstoffe einreichen.Human-in-the-Loop: Automatische Vorstrukturierung durch KI $\rightarrow$ Admin Approval Queue $\rightarrow$ Freischaltung im zentralen Knowledge Graph für alle Cloud-User.4.7 ICS Kalender-Abo SystemGenerierung dynamischer Webcal/ICS-Feeds.Basic: 1 Link. Pro: Bis zu 3 Links (z. B. Morning, Pre-Workout, Night).Exakte Zuweisung von Einnahmezeiten (z. B. "Zink nicht zeitgleich mit Magnesium" oder "Fat-soluble vitamins with meals").5. PocketBase Datenbank-SchemausersFieldTypeRules / NotesidRecord IDPrimary KeyusernameStringUnique, RequiredpasswordHashHandled by PocketBase Authrecovery_hashStringHashed Seed Phrase Validationsubscription_tierSelect"basic", "pro"createdAutodateuser_profilesFieldTypeRules / NotesidRecord IDPrimary Keyuser_idRelationSingle -> usersunit_systemSelect"metric", "imperial"ageNumberOptionalheight_cmNumberOptionalweight_kgNumberOptionalbio_sexSelect"male", "female", "intersex"gender_identityStringOptional (for UI greeting)sleep_qualitySelect"poor", "moderate", "good"activity_levelSelect"sedentary", "moderate", "athletic"caffeine_daily_mgNumberDefault 0medicationsJSONArray of Strings/Objectscountry_codeStringISO-2 (e.g. "DE")cycle_dataJSON{ regular: bool, avg_length: int, symptoms: [] }allergiesJSONArray of Stringssafety_overrideBoolDefault false (Pro Tier only)substances (Supplements, Peptides, Compounds)FieldTypeRules / NotesidRecord IDPrimary KeynameStringe.g., "BPC-157", "Magnesium Bisglycinate"categorySelect"vitamin", "mineral", "peptide", "nootropic", "other"evidence_levelSelect"A_meta", "B_human", "C_animal", "D_anecdotal"wiki_contentMarkdownDeep dive info & research summarydosage_recommendationsJSON{ default: "250mcg", max_daily: "500mcg", unit: "mcg" }affiliate_linksJSONArray of { vendor: string, url: string }statusSelect"approved", "pending_approval"substance_interactionsFieldTypeRules / NotesidRecord IDPrimary Keysubstance_aRelationSingle -> substancessubstance_bRelationSingle -> substancesinteraction_typeSelect"synergy", "inhibition", "contraindication"severitySelect"low", "medium", "high", "critical"descriptionTextExplanation of interactionuser_stacksFieldTypeRules / NotesidRecord IDPrimary Keyuser_idRelationSingle -> usersstack_typeSelect"byos" (Bring your own) or "recommended"itemsJSONArray of { substance_id: string, dose: string, timing: "08:00" }matching_scoreNumberPercentage (0-100)confidence_scoreNumberPercentage (0-100)calendar_feedsFieldTypeRules / NotesidRecord IDPrimary Keyuser_idRelationSingle -> usersfeed_tokenStringUnique tokenized secretnameStringe.g., "Morning Stack"assigned_timingsJSONArray of time triggers (e.g. ["morning", "pre_workout"])6. One-Shot Coding Agent PromptDu kannst den folgenden Block direkt in deinen AI-Coding-Agenten (Claude Code, OpenCode, Cursor etc.) kopieren:MarkdownYou are an expert full-stack developer building a SaaS application called "Supplement Stack Calculator" using SvelteKit, Tailwind CSS, PocketBase, and Node.js with OpenRouter.
+
+### Core Objective
+Build a multi-tenant Cloud SaaS platform that generates evidence-based supplement and peptide stacks based on user biometrics, lifestyle, medications, and cycle data, including an anonymous auth flow, a "Bring Your Own Stack" (BYOS) matching engine, and dynamic ICS calendar subscription feeds.
+
+### Technical Stack & Requirements
+1. Frontend: SvelteKit with Tailwind CSS (English-first, clean UI, metric/imperial toggle).
+2. Backend/Database: PocketBase.
+3. AI Service: Node.js service connecting to OpenRouter API (DeepSeek / Claude) for analyzing paper research and computing confidence scores.
+4. Deployment Target: Multi-tenant Cloud SaaS (Basic Tier: 1 ICS feed free; Pro Tier: 3 ICS feeds, Safety Override Mode, advanced AI queries).
+
+### Key Features to Implement
+1. Anonymous Authentication:
+   - Username + Password auth in PocketBase (NO email field).
+   - Generate a 25-word recovery seed phrase on signup.
+   - Force download of a `.txt` file containing the seed.
+   - Require verification of 3-5 random words from the seed before completing onboard registration.
+
+2. Comprehensive User Profiling (Inclusive UX):
+   - Capture Age, Height, Weight, Biological Sex, Gender Identity.
+   - Sleep quality, Activity level, Caffeine intake, Location/Country (for UV/D3 calculation), Allergies, Medications (e.g., ADHS meds/Bupropion).
+   - Female Cycle Tracking: Cycle regularity, PMS/cycle symptoms.
+   - Add info tooltips (I) for every field explaining "Why we ask this".
+
+3. Recommendation Engine & Confidence Score:
+   - Calculate a 0-100% Confidence Score based on profile completeness.
+   - Color-coded indicators (Green = high data, Yellow = assumption made, Red = risk/conflict).
+   - Support standard baseline portfolio (Multivitamin, Creatine) + specialized Peptides.
+   - Display explicit Medical Disclaimer modal on first launch requiring user acknowledgment.
+
+4. Bring Your Own Stack (BYOS) & Safety Override:
+   - Allow users to enter custom supplements, dosages, and times.
+   - Compute a "Matching Score" (%) against ideal recommendations.
+   - Detect redundancies and over-dosages.
+   - Implement a "Safety Override Mode" toggle for Pro Users to dismiss high-dose warnings (with confirmation logging).
+
+5. ICS Calendar Feed Generator:
+   - Generate secure, tokenized `.ics` webcal endpoints (`/api/v1/calendar/:token.ics`).
+   - Allow up to 1 feed for Basic tier, up to 3 feeds for Pro tier.
+   - Parse dosage times into iCal events.
+
+6. Database Schema (PocketBase Collections):
+   - Create collections for: `users`, `user_profiles`, `substances`, `substance_interactions`, `user_stacks`, and `calendar_feeds`.
+
+Please start by setting up the PocketBase collection definitions, the SvelteKit project structure, and the anonymous signup flow with 25-word seed verification.
