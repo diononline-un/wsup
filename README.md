@@ -23,7 +23,7 @@ seed recovery, password change.
 
 - `web/` SvelteKit 2 + Svelte 5 + Tailwind 4 (dev port **2018**)
 - PocketBase 0.40 as backend and database (dev port **2017**), migrations in `pb_migrations/`
-- AI service for OpenRouter is planned, not built yet
+- AI: DeepSeek API (server-side key in `.env`, `deepseek-flash` for Basic and `deepseek-v4-pro` for Pro), service still planned
 
 ## First-time setup
 
@@ -39,9 +39,15 @@ chmod +x .tools/pocketbase/pocketbase
 ./.tools/pocketbase/pocketbase superuser upsert admin@wsup.local devpass-admin-2016 --dir ./pb_data
 
 # web env + deps
-cp web/.env.example web/.env    # set PB_ADMIN_PASSWORD to the superuser password
+cp .env.example .env            # set PB_ADMIN_PASSWORD and DEEPSEEK_API_KEY
 cd web && npm install && cd ..
 ```
+
+## Env
+
+All server env lives in the repo-root `.env` (gitignored); SvelteKit reads it via `kit.env.dir: '..'`.
+`DEEPSEEK_API_KEY` stays server-side (never use a `PUBLIC_` prefix): Pro accounts are served through this platform key,
+so the browser must never call the provider directly.
 
 ## Run
 

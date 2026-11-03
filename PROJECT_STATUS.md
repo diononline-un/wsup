@@ -2,7 +2,7 @@
 status: in-development
 progress: 50
 version: "0.1.0"
-tags: [saas, supplements, peptides, sveltekit, tailwind, pocketbase, openrouter, ics]
+tags: [saas, supplements, peptides, sveltekit, tailwind, pocketbase, deepseek, ics]
 scope: "Multi-Tenant-Cloud-SaaS fuer evidenzbasierte Supplement-/Peptid-Stacks: anonyme Auth mit 25-Wort-Recovery-Seed, Profil, Confidence Score, BYOS-Matching, Safety Override, ICS-Feeds. Basic 1 Feed, Pro 3 Feeds."
 last_updated: "2026-11-03"
 next_steps:
@@ -11,7 +11,7 @@ next_steps:
   - "Evidence-Daten pflegen: neue Papers pro Substanz nachziehen (research/evidence.json + Migration) und Peptid-Seiten mit vollstaendigen rejuvia-Dossiers vertiefen"
   - "BYOS-Matching und Safety-Override (Pro) inkl. Bestaetigungs-Logging"
   - "ICS-Feed-Generator /api/v1/calendar/:token.ics (1 Feed Basic, 3 Pro)"
-  - "Node.js AI-Service an OpenRouter anbinden (DeepSeek default, Claude Pro)"
+  - "AI-Service an DeepSeek anbinden (deepseek-flash fuer Basic, deepseek-v4-pro fuer Pro, Plattform-Key serverseitig aus .env)"
 ---
 
 # Supplement Stack Calculator (wsup)

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-03 — DeepSeek als AI-Provider verdrahtet
+
+- Einheitliches Root-`.env` (gitignored) für PocketBase- und DeepSeek-Zugang; SvelteKit lädt Env über `kit.env.dir: '..'`.
+- Variablen: `DEEPSEEK_API_KEY`, `DEEPSEEK_BASE_URL`, `DEEPSEEK_MODEL_BASIC=deepseek-flash`, `DEEPSEEK_MODEL_PRO=deepseek-v4-pro`. Key bleibt serverseitig (kein PUBLIC-Prefix).
+- Key gegen DeepSeek geprüft: `/models` 200, Chat-Completion 200. `apiforenv.txt` bleibt gitignored.
+- `.env.example` dokumentiert die Variablen mit Platzhaltern.
+
 ## 2026-11-03 — Evidence-Library mit Research-Database
 
 - Neue Collection `substance_evidence` (Papers mit DOI/PMID/URL) und Research-Felder auf `substances` (`research_summary`, `evidence_note`, `claims`, `research_updated`); Evidenzskala auf A–E erweitert.

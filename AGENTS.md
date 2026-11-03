@@ -28,7 +28,7 @@ Gilt zusätzlich zu `~/.dsh/AGENTS.md`, projektspezifisch.
   SHA-256 (`web/src/lib/seed/sha256.ts`), nicht mit WebCrypto. Im Browser nur `crypto.getRandomValues` nutzen.
 - Recovery-Hash: scrypt in `web/src/lib/server/recovery.ts`, gespeichert in `user_secrets` (API-Rules `null`,
   nur Superuser). Seed-Wörter niemals speichern oder loggen.
-- Superuser-Zugang für Server-Calls aus `web/.env` (`PB_ADMIN_EMAIL`, `PB_ADMIN_PASSWORD`, gitignored).
+- Superuser-Zugang für Server-Calls aus dem Root-`.env` (`PB_ADMIN_EMAIL`, `PB_ADMIN_PASSWORD`, gitignored); `web/svelte.config.js` lädt Env über `kit.env.dir: '..'`.
 
 ## Marke und UI
 
@@ -40,6 +40,14 @@ Gilt zusätzlich zu `~/.dsh/AGENTS.md`, projektspezifisch.
 - Routen: `/signup`, `/login`, `/dashboard`, `/onboarding/profile`, `/settings`.
 - Account-API: `/api/signup`, `/api/account/export` (JSON-Download, ohne Recovery-Hash), `/api/account/delete`
   (Passwort-Re-Check, Superuser-Löschung, Cascades räumen Profil/Secrets/Stacks/Feeds).
+
+## AI / DeepSeek
+
+- Ein einziges Root-`.env` (gitignored) enthält `DEEPSEEK_API_KEY`, `DEEPSEEK_BASE_URL=https://api.deepseek.com`,
+  `DEEPSEEK_MODEL_BASIC=deepseek-flash`, `DEEPSEEK_MODEL_PRO=deepseek-v4-pro`. SvelteKit liest es per `kit.env.dir: '..'`.
+- Der Key ist Plattform-Key: Pro-Nutzer werden serverseitig darüber versorgt. Niemals mit `PUBLIC_` prefixen und nie
+  aus dem Browser gegen DeepSeek rufen; nur Server-Routen/Services lesen `$env/dynamic/private`.
+- Key-Rohdatei `apiforenv.txt` ist gitignored; kein Secret committen (auch nicht in `.env.example`).
 
 ## Research / Evidence
 
