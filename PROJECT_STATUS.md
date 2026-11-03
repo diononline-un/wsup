@@ -22,3 +22,5 @@ Stand: Repo-Geruest, PocketBase-Collections + Seed-Substanzen, anonyme Signup-St
 25-Wort-Recovery-Seed (Download + 3-5-Wort-Quizz), Seed-Hash in admin-only Collection.
 
 Dev-Start: `./scripts/dev-pb.sh` (PocketBase), `cd web && npm run dev`.
+Links (Tailscale, immer statt localhost): App http://vmd194777.taild7e20.ts.net:2018,
+PocketBase-Admin http://vmd194777.taild7e20.ts.net:2017/_/.

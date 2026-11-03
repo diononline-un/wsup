@@ -19,28 +19,28 @@ test('wordlist has 2048 unique words', () => {
   assert.equal(new Set(WORDS).size, 2048)
 })
 
-test('checksum reference value matches independent SHA-256 computation', async () => {
+test('checksum reference value matches independent SHA-256 computation', () => {
   // python hashlib reference: sha256("abandon "*24), top 11 bits -> 1697 -> "stage"
-  assert.equal(await checksumIndex(abandon24), 1697)
+  assert.equal(checksumIndex(abandon24), 1697)
   assert.equal(WORDS[1697], 'stage')
 })
 
-test('generated phrase has 25 known words and validates', async () => {
-  const phrase = await generatePhrase()
+test('generated phrase has 25 known words and validates', () => {
+  const phrase = generatePhrase()
   assert.equal(phrase.length, SEED_WORD_COUNT)
-  assert.equal(await validatePhrase(phrase), null)
+  assert.equal(validatePhrase(phrase), null)
 })
 
 test('fixed phrase validates and tampered phrase fails checksum', async () => {
   const phrase = [...abandon24, 'stage']
-  assert.equal(await validatePhrase(phrase), null)
+  assert.equal(validatePhrase(phrase), null)
   const tampered = ['ability', ...abandon24.slice(1), 'stage']
-  assert.match((await validatePhrase(tampered)) ?? '', /checksum/)
+  assert.match(validatePhrase(tampered) ?? '', /checksum/)
 })
 
-test('wrong word count and unknown words are rejected', async () => {
-  assert.match((await validatePhrase(abandon24)) ?? '', /25 words/)
-  assert.match((await validatePhrase([...abandon24, 'notaword'])) ?? '', /not part of the recovery wordlist/)
+test('wrong word count and unknown words are rejected', () => {
+  assert.match(validatePhrase(abandon24) ?? '', /25 words/)
+  assert.match(validatePhrase([...abandon24, 'notaword']) ?? '', /not part of the recovery wordlist/)
 })
 
 test('quiz picks 3-5 distinct positions inside the phrase', () => {
@@ -62,8 +62,8 @@ test('quiz verification reports only wrong positions', () => {
   assert.deepEqual(verifyQuiz(phrase, [...correct, { index: 3, word: 'zoo' }]), [3])
 })
 
-test('seed file round-trips through normalizePhrase', async () => {
-  const phrase = await generatePhrase()
+test('seed file round-trips through normalizePhrase', () => {
+  const phrase = generatePhrase()
   const file = buildSeedFile('alice', phrase)
   assert.ok(file.includes('Username: alice'))
   assert.equal(file.trim().split('\n').length, 35)

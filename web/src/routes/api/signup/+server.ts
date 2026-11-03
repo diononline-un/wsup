@@ -30,7 +30,7 @@ export const POST: RequestHandler = async ({ request }) => {
   if (passIssue) return fail('password', passIssue)
 
   const phrase = Array.isArray(body.phrase) ? body.phrase.filter((word): word is string => typeof word === 'string') : []
-  const phraseIssue = await validatePhrase(phrase)
+  const phraseIssue = validatePhrase(phrase)
   if (phraseIssue) return fail('seed', phraseIssue)
 
   const answers = (Array.isArray(body.answers) ? body.answers : [])

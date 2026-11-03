@@ -23,7 +23,7 @@
     { id: 'verify', label: 'Verify' },
   ]
 
-  async function startSeedStep() {
+  function startSeedStep() {
     error = ''
     username = normalizeUsername(username)
     const issue = usernameError(username) ?? passwordError(password)
@@ -35,13 +35,8 @@
       error = 'Passwords do not match.'
       return
     }
-    busy = true
-    try {
-      phrase = await generatePhrase()
-      step = 'seed'
-    } finally {
-      busy = false
-    }
+    phrase = generatePhrase()
+    step = 'seed'
   }
 
   function downloadSeed() {

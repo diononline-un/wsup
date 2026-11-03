@@ -32,9 +32,21 @@ cd web && npm install && cd ..
 ## Run
 
 ```bash
-./scripts/dev-pb.sh          # PocketBase on http://127.0.0.1:2017 (dashboard at /_/)
-cd web && npm run dev        # app on http://127.0.0.1:2018
+./scripts/dev-pb.sh          # PocketBase, listens on 0.0.0.0:2017
+cd web && npm run dev        # SvelteKit, listens on 0.0.0.0:2018
 ```
+
+## Access
+
+Both servers bind all interfaces so they are reachable through Tailscale:
+
+- App: http://vmd194777.taild7e20.ts.net:2018 (or http://100.87.5.121:2018)
+- PocketBase dashboard: http://vmd194777.taild7e20.ts.net:2017/_/
+
+Never use `localhost` links in handoffs: the browser usually runs on another machine. Dev URLs are
+plain HTTP, so the browser is an insecure context and `crypto.subtle` is unavailable; the seed checksum
+uses the local SHA-256 in `web/src/lib/seed/sha256.ts` for exactly that reason. Vite dev allows the
+Tailscale host via `server.allowedHosts` in `web/vite.config.ts`.
 
 Tests: `cd web && npm test` (seed phrase, credential rules, scrypt hashing).
 

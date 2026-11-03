@@ -4,6 +4,7 @@
 //
 // Explicit .ts import extensions keep this module runnable with `node --test`
 // without a bundler.
+import { sha256 } from './sha256.ts'
 import { WORDS } from './wordlist.ts'
 
 export const SEED_WORD_COUNT = 25
@@ -22,15 +23,14 @@ export function randomInt(max: number): number {
 }
 
 /** Top 11 bits of SHA-256 over the first 24 words, used as the checksum word index. */
-export async function checksumIndex(words: readonly string[]): Promise<number> {
-  const data = new TextEncoder().encode(words.join(' '))
-  const digest = new Uint8Array(await crypto.subtle.digest('SHA-256', data))
+export function checksumIndex(words: readonly string[]): number {
+  const digest = sha256(new TextEncoder().encode(words.join(' ')))
   return ((digest[0] << 8) | digest[1]) >>> 5
 }
 
-export async function generatePhrase(): Promise<string[]> {
+export function generatePhrase(): string[] {
   const words = Array.from({ length: ENTROPY_WORD_COUNT }, () => WORDS[randomInt(WORDS.length)])
-  return [...words, WORDS[await checksumIndex(words)]]
+  return [...words, WORDS[checksumIndex(words)]]
 }
 
 /** Lowercase and drop non-letters (numbering, commas, dots from pasted text). */
@@ -43,12 +43,12 @@ export function isWord(word: string): boolean {
   return WORD_INDEX.has(word)
 }
 
-export async function validatePhrase(input: string | readonly string[]): Promise<string | null> {
+export function validatePhrase(input: string | readonly string[]): string | null {
   const phrase = normalizePhrase(input)
   if (phrase.length !== SEED_WORD_COUNT) return `Recovery seed must contain ${SEED_WORD_COUNT} words.`
   const unknown = phrase.find((word) => !isWord(word))
   if (unknown) return `"${unknown}" is not part of the recovery wordlist.`
-  const expected = WORDS[await checksumIndex(phrase.slice(0, ENTROPY_WORD_COUNT))]
+  const expected = WORDS[checksumIndex(phrase.slice(0, ENTROPY_WORD_COUNT))]
   if (phrase[SEED_WORD_COUNT - 1] !== expected) return 'Recovery seed checksum does not match.'
   return null
 }
