@@ -6,9 +6,9 @@ Gilt zusätzlich zu `~/.dsh/AGENTS.md`, projektspezifisch.
 
 - Jede URL an den Nutzer immer als Tailscale-Link ausgeben, nie `localhost`/`127.0.0.1` —
   der Browser läuft in der Regel auf einem anderen Rechner.
-- App (SvelteKit, Port 2018): http://vmd194777.taild7e20.ts.net:2018
-- PocketBase-Admin (Port 2017): http://vmd194777.taild7e20.ts.net:2017/_/
-- Tailscale-IP als Fallback: 100.87.5.121.
+- App (SvelteKit, Port 2018): http://localhost:2018
+- PocketBase-Admin (Port 2017): http://localhost:2017/_/
+- Tailscale-IP als Fallback: localhost.
 - Beide Dev-Server binden `0.0.0.0` (`scripts/dev-pb.sh`, `web/package.json`), Vite erlaubt den
   Tailscale-Host über `server.allowedHosts` in `web/vite.config.ts`.
 
@@ -55,7 +55,7 @@ Gilt zusätzlich zu `~/.dsh/AGENTS.md`, projektspezifisch.
 - Migration `pb_migrations/1757400003_research.js` liest die Datei per `$os.readFile("research/evidence.json")` —
   PocketBase muss aus dem Repo-Root gestartet werden (`./scripts/dev-pb.sh`). `$os.readFile` liefert Bytes:
   mit `String.fromCharCode` in einen String wandeln, nicht direkt an `JSON.parse` geben.
-- Peptid-Quellen: aus `/home/dsh/Projekte/rejuvia/src/lib/forschung/subjects/` extrahiert (dort mit PMID/DOI geprüft).
+- Peptid-Quellen: aus `./src/lib/forschung/subjects/` extrahiert (dort mit PMID/DOI geprüft).
   Stanni-Quellen: PubMed E-utilities, Metadaten mit DOI/PMID im Datensatz.
 - Evidenzskala A-E (A stärkste), Claims brauchen `level` + `status`; `web && npm test` prüft 1:1-Mapping zu
   den Seed-Substanzen und alle Pflichtfelder.

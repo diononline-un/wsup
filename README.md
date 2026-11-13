@@ -60,8 +60,8 @@ cd web && npm run dev        # SvelteKit, listens on 0.0.0.0:2018
 
 Both servers bind all interfaces so they are reachable through Tailscale:
 
-- App: http://vmd194777.taild7e20.ts.net:2018 (or http://100.87.5.121:2018)
-- PocketBase dashboard: http://vmd194777.taild7e20.ts.net:2017/_/
+- App: http://localhost:2018 (or http://localhost:2018)
+- PocketBase dashboard: http://localhost:2017/_/
 
 Never use `localhost` links in handoffs: the browser usually runs on another machine. Dev URLs are
 plain HTTP, so the browser is an insecure context and `crypto.subtle` is unavailable; the seed checksum
