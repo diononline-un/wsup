@@ -34,11 +34,11 @@ Rules enforced by `evidence.test.mjs`:
 
 ## Provenance
 
-- Peptide sources and evidence grades: extracted from the rejuvia research portal
+- Peptide sources and evidence grades: extracted from an internal research portal
   (`./src/lib/forschung/subjects/`), then re-checked per DOI/PMID.
 - Standard supplement sources: selected landmark trials, systematic reviews and position stands fetched from
   PubMed E-utilities (metadata: title, authors, journal, year, DOI, PMID). Claims are own paraphrases.
-- Grades use the rejuvia scale: A strongest, B moderate, C limited, D weak, E contradicted.
+- Grades use this scale: A strongest, B moderate, C limited, D weak, E contradicted.
 
 ## Update workflow
 
