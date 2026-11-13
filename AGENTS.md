@@ -69,3 +69,12 @@ cd web && npm run dev                    # SvelteKit 0.0.0.0:2018
 cd web && npm test                       # node --test: phrase, sha256, credentials, recovery
 cd web && npm run build                  # adapter-node Build
 ```
+
+## Stand
+
+Anonyme Anmeldung mit 25-Wort-Recovery-Seed, Profil-Onboarding, Dashboard,
+Einstellungen und Dark Mode laufen.
+
+Offen: Seed-Recovery-Flow mit Rate-Limit, Recommendation Engine mit Confidence
+Score, Evidence-Daten nachziehen, BYOS-Matching mit Safety-Override,
+ICS-Feed-Generator, Anbindung des KI-Dienstes an DeepSeek.
